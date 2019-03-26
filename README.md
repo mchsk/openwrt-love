@@ -18,6 +18,7 @@ cd openwrt
 ## Checkout this repo & copy files
 ```
 git clone https://github.com/mchsk/openwrt-love.git
+# delete orig proto-ncm proto-qmi
 ```
 
 ## Have fun
@@ -25,4 +26,9 @@ git clone https://github.com/mchsk/openwrt-love.git
 make menuconfig
 screen
 make V=j
+```
+
+## Dont forget
+```
+socat netcat n2n
 ```
