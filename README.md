@@ -21,18 +21,34 @@ git clone https://github.com/mchsk/openwrt-love.git
 # delete orig proto-ncm proto-qmi
 ```
 
-## Have fun
+## Config! make menuconfig
 ```
-make menuconfig
-screen
-make V=j
+GENERIC
+LuCI/Collections/luci
+LuCI/Protocols/luci-proto-n2n
+Network/SSH/openssh-sftp-server
+Network/netcat
+Network/socat (SSL support)
+
+4G
+Kernel modules/USB Support/kmod-usb-net/kmod-usb-net-huawei-cdc-ncm
+Kernel modules/USB Support/kmod-usb-serial/kmod-usb-serial-wwan
+Kernel modules/USB Support/kmod-usb-acm
+Kernel modules/USB Support/kmod-usb-ohci
+Kernel modules/USB Support/kmod-usb-uhci
+Luci/Protocols/luci-proto-3g
+Luci/Protocols/luci-proto-wwan(qqan/qmi/ncm)
+Network/WWAN/comgt-ncm
+Utilities/usb-modeswitch
+Utilities/usbutils
 ```
 
-## Dont forget
+## Build
 ```
-luci luci-proto-n2n netcat socat openssh-sftp-server
-4G: luci-proto-wwan(qqan/qmi/ncm) kmod-usb-net-huawei-cdc-ncm 
+screen
+make
 ```
 
 ## Create WWAN like this
 ![wwan](https://github.com/mchsk/openwrt-love/raw/master/img/wwan.png "wwan")
+
