@@ -24,6 +24,7 @@ git clone https://github.com/mchsk/openwrt-love.git
 ## Config! make menuconfig
 ```
 GENERIC
+Administration/htop
 LuCI/Collections/luci
 LuCI/Protocols/luci-proto-n2n
 Network/SSH/openssh-sftp-server
