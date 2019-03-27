@@ -22,7 +22,7 @@ git clone https://github.com/mchsk/openwrt-love.git
 # MAKRE REPO PRIVATE
 
 # delete orig openwrt/feeds/luci/protocols/proto-wwan,proto-ncm,proto-qmi
-# copy there the ones from openwrt-love
+# copy there tfe files from openwrt-love over openwrt
 
 # in orig openwrt run ./scripts/feeds update -a + ./scripts/feeds install -a
 ```
