@@ -31,7 +31,7 @@ make V=j
 ## Dont forget
 ```
 luci luci-proto-n2n netcat socat openssh-sftp-server
-4G: luci-proto-ncm luci-proto-wwan luci-proto-qmi kmod-usb-net-huawei-cdc-ncm 
+4G: luci-proto-wwan(qqan/qmi/ncm) kmod-usb-net-huawei-cdc-ncm 
 ```
 
 ## Create WWAN like this
