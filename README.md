@@ -17,8 +17,14 @@ cd openwrt
 
 ## Checkout this repo & copy files
 ```
+# MAKRE REPO PUBLIC
 git clone https://github.com/mchsk/openwrt-love.git
-# delete orig proto-ncm proto-qmi
+# MAKRE REPO PRIVATE
+
+# delete orig openwrt/feeds/luci/protocols/proto-wwan,proto-ncm,proto-qmi
+# copy there the ones from openwrt-love
+
+# in orig openwrt run ./scripts/feeds update -a + ./scripts/feeds install -a
 ```
 
 ## Config! make menuconfig
