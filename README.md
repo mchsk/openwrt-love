@@ -36,8 +36,8 @@ rm -rf openwrt/feeds/luci/protocols/luci-proto-ncm/
 rm -rf openwrt/feeds/luci/protocols/luci-proto-qmi/
 
 # copy over the files from the openwrt-love over openwrt
-rsync -a ./openwrt-love/package/ ./openwrt/package/
-rsync -a ./openwrt-love/feeds/ ./openwrt/feeds/
+rsync -p ./openwrt-love/package/ ./openwrt/package/
+rsync -p ./openwrt-love/feeds/ ./openwrt/feeds/
 
 # sync the packages
 cd openwrt
@@ -56,13 +56,14 @@ Network/netcat
 Network/socat (SSL support)
 
 4G
-Kernel modules/USB Support/kmod-usb-net/kmod-usb-net-huawei-cdc-ncm
-Kernel modules/USB Support/kmod-usb-serial/kmod-usb-serial-wwan
 Kernel modules/USB Support/kmod-usb-acm
+Kernel modules/USB Support/kmod-usb-net/kmod-usb-net-huawei-cdc-ncm
 Kernel modules/USB Support/kmod-usb-ohci
+Kernel modules/USB Support/kmod-usb-serial/kmod-usb-serial-wwan
 Kernel modules/USB Support/kmod-usb-uhci
 Luci/Protocols/luci-proto-3g
 Luci/Protocols/luci-proto-wwan(qqan/qmi/ncm)
+Network/3ginfo
 Network/WWAN/comgt-ncm
 Utilities/usb-modeswitch
 Utilities/usbutils
