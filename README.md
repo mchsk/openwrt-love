@@ -8,9 +8,10 @@ sudo apt install subversion g++ zlib1g-dev build-essential git python time libnc
 ## Checkout latest version
 ```
 git clone https://github.com/openwrt/openwrt.git
+cd openwrt
 git fetch --all --tags --prune
 git checkout tags/v18.06.2
-cd openwrt
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 ```
