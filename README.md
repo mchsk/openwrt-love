@@ -5,32 +5,35 @@
 sudo apt install subversion g++ zlib1g-dev build-essential git python time libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev build-essential libncurses5-dev python unzip screen mc
 ```
 
-## Checkout latest version
+## Checkout tag based commit of OpenWrt sources
 ```
+# FIRST FIRST FIRST FIRST FIRST FIRST FIRST FIRST FIRST
+# MAKE THIS REPO PUBLIC (settings/options/down there)
+# THEN ->
+
+
 # go home!
 cd ~
 
+# clone
 git clone https://github.com/openwrt/openwrt.git
+
+# get in
 cd openwrt
+
+# get the right commit
 git fetch --all --tags --prune
 git checkout tags/v18.06.2
 
+# update packages from feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-```
-
-## Checkout this repo & copy files
-```
-# go home!
+# go home again!
 cd ~
 
-# MAKE THIS REPO PUBLIC (settings/options/down there)
-
-# then clone it
+# clone this repo
 git clone https://github.com/mchsk/openwrt-love.git
-
-# MAKE REPO PRIVATE AGAIN
 
 # delete orig ncm/qmi
 rm -rf openwrt/feeds/luci/protocols/luci-proto-ncm/
@@ -40,11 +43,15 @@ rm -rf openwrt/feeds/luci/protocols/luci-proto-qmi/
 rsync -pr ./openwrt-love/package/ ./openwrt/package/
 rsync -pr ./openwrt-love/feeds/ ./openwrt/feeds/
 
-# sync the packages
+# sync the packages again
 cd openwrt
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
+# and run the menuconfig
+make menuconfig
+
+# :)
 ```
 
 ## Config! make menuconfig
