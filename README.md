@@ -2,11 +2,14 @@
 
 ## Prepare your system
 ```
-sudo apt install subversion g++ zlib1g-dev build-essential git python time libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev build-essential libncurses5-dev python unzip screen
+sudo apt install subversion g++ zlib1g-dev build-essential git python time libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev build-essential libncurses5-dev python unzip screen mc
 ```
 
 ## Checkout latest version
 ```
+# go home!
+cd ~
+
 git clone https://github.com/openwrt/openwrt.git
 cd openwrt
 git fetch --all --tags --prune
@@ -18,14 +21,28 @@ git checkout tags/v18.06.2
 
 ## Checkout this repo & copy files
 ```
-# MAKRE REPO PUBLIC
+# go home!
+cd ~
+
+# MAKE THIS REPO PUBLIC (settings/options/down there)
+
+# then clone it
 git clone https://github.com/mchsk/openwrt-love.git
-# MAKRE REPO PRIVATE
 
-# delete orig openwrt/feeds/luci/protocols/proto-wwan,proto-ncm,proto-qmi
-# copy there tfe files from openwrt-love over openwrt
+# MAKE REPO PRIVATE AGAIN
 
-# in orig openwrt run ./scripts/feeds update -a + ./scripts/feeds install -a
+# delete orig ncm/qmi
+rm -rf openwrt/feeds/luci/protocols/luci-proto-ncm/
+rm -rf openwrt/feeds/luci/protocols/luci-proto-qmi/
+
+# copy over the files from the openwrt-love over openwrt
+rsync -a ./openwrt-love/package/ ./openwrt/package/
+rsync -a ./openwrt-love/feeds/ ./openwrt/feeds/
+
+# sync the packages
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
 ```
 
 ## Config! make menuconfig
