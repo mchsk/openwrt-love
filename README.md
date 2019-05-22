@@ -36,8 +36,8 @@ rm -rf openwrt/feeds/luci/protocols/luci-proto-ncm/
 rm -rf openwrt/feeds/luci/protocols/luci-proto-qmi/
 
 # copy over the files from the openwrt-love over openwrt
-rsync -p ./openwrt-love/package/ ./openwrt/package/
-rsync -p ./openwrt-love/feeds/ ./openwrt/feeds/
+rsync -pr ./openwrt-love/package/ ./openwrt/package/
+rsync -pr ./openwrt-love/feeds/ ./openwrt/feeds/
 
 # sync the packages
 cd openwrt
