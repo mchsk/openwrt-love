@@ -62,8 +62,8 @@ Kernel modules/USB Support/kmod-usb-serial/kmod-usb-serial-wwan
 Kernel modules/USB Support/kmod-usb-uhci
 Luci/Protocols/luci-proto-3g
 Luci/Protocols/luci-proto-wwan(qqan/qmi/ncm)
-Network/3ginfo
 Network/WWAN/comgt-ncm
+Network/3ginfo
 Utilities/usb-modeswitch
 Utilities/usbutils
 ```
