@@ -17,6 +17,7 @@ git checkout tags/v18.06.2
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
 ```
 
 ## Checkout this repo & copy files
@@ -43,6 +44,7 @@ rsync -pr ./openwrt-love/feeds/ ./openwrt/feeds/
 cd openwrt
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
 ```
 
 ## Config! make menuconfig
