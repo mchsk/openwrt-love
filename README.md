@@ -5,7 +5,7 @@
 sudo apt install subversion g++ zlib1g-dev build-essential git python time libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev build-essential libncurses5-dev python unzip screen mc
 ```
 
-## Checkout tag based commit of OpenWrt sources
+## Open MENUCONFIG
 ```
 # FIRST FIRST FIRST FIRST FIRST FIRST FIRST FIRST FIRST
 # MAKE THIS REPO PUBLIC (settings/options/down there)
@@ -54,7 +54,7 @@ make menuconfig
 # :)
 ```
 
-## Config! make menuconfig
+## TODO in MENUCONFIG
 ```
 GENERIC
 LuCI/Collections/luci
