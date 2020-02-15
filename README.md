@@ -23,7 +23,7 @@ cd openwrt
 
 # get the right commit
 git fetch --all --tags --prune
-git checkout tags/v18.06.2
+git checkout tags/v19.07.1
 
 # update packages from feeds
 ./scripts/feeds update -a
